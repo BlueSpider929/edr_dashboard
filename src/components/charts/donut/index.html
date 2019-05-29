@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			Doughnut gauge test
+		</title>	
+	</head>
+	<script type="text/javascript" src="doughnut.js"></script>
+	<body>
+		<div id="myCanvas1" style="border:1px solid #d3d3d3; float: left">
+		</div>
+		<div id="myCanvas2" style="border:1px solid #d3d3d3; float: left">		
+		</div>
+		<div id="myCanvas3" style="border:1px solid #d3d3d3; float: left">		
+		</div>		
+
+	</body>
+	<script type="text/javascript">
+		
+
+		var config_option1 = {
+			canvasWidth : 200,
+			canvasHeight : 200,
+			circleRadius : 80
+
+		};
+
+		var config_option2 = {
+			canvasWidth : 400,
+			canvasHeight : 400,
+			circleRadius : 180,
+			ballMovementMethod : 2,
+
+			valueFont : '32px Arial',
+			titleFont : '18px Arail'
+		};
+
+		var config_option3 = {
+			canvasWidth : 400,
+			canvasHeight : 400,
+			circleRadius : 180,
+			ballMovementMethod : 0,
+
+			valueFont : '90px Arial',
+			titleFont : '30px Arail',
+			valueFontColor: 'red'
+		};
+
+		var doughnut1 = new DoughnutGauge('myCanvas1', config_option1);
+		var doughnut2 = new DoughnutGauge('myCanvas2', config_option2);
+		var doughnut3 = new DoughnutGauge('myCanvas3', config_option3);
+
+		doughnut1.drawWithBall(90, 'Database');
+		doughnut2.drawWithBall(90, 'Advanced');
+		doughnut3.drawWithBall(90, 'Servers');
+
+
+
+		setTimeout(() => {
+			console.log('setting value...');
+			doughnut3.drawWithBall(50, 'decreasing value test');
+		}, 1);
+
+
+		
+		setTimeout(() => {
+			doughnut3.drawWithBall(95, 'increasing value test');
+		}, 2000);
+
+
+		
+		setTimeout(() => {
+			doughnut3.drawWithBall(-19, 'negative value test');
+		}, 3000);
+
+	
+
+	</script>
+</html>

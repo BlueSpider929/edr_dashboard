@@ -1,0 +1,20 @@
+@font-face {
+    font-family: Poppins;
+    src: url('./Poppins-Regular.otf');
+  }
+  
+  @font-face {
+    font-family:'Poppins Extra Bold' ;
+    src: url('./Poppins-ExtraBold.otf');
+  }
+  
+  @font-face {
+    font-family:'Poppins Semi Bold' ;
+    src: url('./Poppins-SemiBold.otf');
+  }
+
+  
+  @font-face {
+    font-family:'Poppins Monospace' ;
+    src: url('./Poppins-Regular_monospace.otf');
+  }
